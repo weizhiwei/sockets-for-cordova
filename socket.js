@@ -198,6 +198,7 @@ var guid = (function () {
 
 // Register event dispatcher for Windows Phone
 if (navigator.userAgent.match(/iemobile/i)) {
+    alert("is ie!!!");
     window.document.addEventListener("deviceready", function () {
         exec(
             Socket.dispatchEvent,
@@ -207,6 +208,7 @@ if (navigator.userAgent.match(/iemobile/i)) {
             CORDOVA_SERVICE_NAME,
             "registerWPEventDispatcher",
             [ ]);
+        alert("exec done!!!");
     });
 }
 
