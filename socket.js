@@ -200,7 +200,7 @@ var guid = (function () {
 // Register event dispatcher for Windows Phone
 if (navigator.userAgent.match(/iemobile/i)) {
     alert("is ie!!!");
-    window.document.addEventListener("deviceready", function () {
+    document.addEventListener("deviceready", function () {
         alert("wzw: begin exec!!!");
         alert(exec);
         exec(
