@@ -61,6 +61,7 @@ Socket.prototype.open = function (host, port, success, error) {
                 _that.onClose(payload.hasError);
                 break;
             case "DataReceived":
+                alert("wzw: got data!!!");
                 _that.onData(new Uint8Array(payload.data));
                 break;
             case "Error":
