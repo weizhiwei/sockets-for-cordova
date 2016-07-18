@@ -61,7 +61,6 @@ Socket.prototype.open = function (host, port, success, error) {
                 _that.onClose(payload.hasError);
                 break;
             case "DataReceived":
-                alert("wzw: got data!!!");
                 _that.onData(new Uint8Array(payload.data));
                 break;
             case "Error":
@@ -199,11 +198,7 @@ var guid = (function () {
 
 // Register event dispatcher for Windows Phone
 if (navigator.userAgent.match(/iemobile/i)) {
-    alert("is ie!!!");
-    alert(document);
     document.addEventListener("deviceready", function () {
-        alert("wzw: begin exec!!!");
-        alert(exec);
         exec(
             Socket.dispatchEvent,
             function (errorMessage) {
@@ -212,7 +207,6 @@ if (navigator.userAgent.match(/iemobile/i)) {
             CORDOVA_SERVICE_NAME,
             "registerWPEventDispatcher",
             [ ]);
-        alert("exec done!!!");
     });
 }
 
