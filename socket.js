@@ -201,6 +201,8 @@ var guid = (function () {
 if (navigator.userAgent.match(/iemobile/i)) {
     alert("is ie!!!");
     window.document.addEventListener("deviceready", function () {
+        alert("wzw: begin exec!!!");
+        alert(exec);
         exec(
             Socket.dispatchEvent,
             function (errorMessage) {
